@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,73 +6,112 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     background: hsl(233, 47%, 7%);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.5rem;
+    line-height: 1.7;
 }
+
 .container {
     display: flex;
-    justify-content: center;
-    width: 1200px;
-    height: 400px;
-    margin-top: 40px;
+    justify-content: space-between;
+    width: 1100px;
     background: hsl(244, 38%, 16%);
     border-radius: 15px;
 }
-.main {
+
+.text-wrapper {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    margin: 70px;
+    padding: 2rem 3.5rem;
 }
-img {
+
+.image {
     width: 50%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: hsl(277, 64%, 61%);;
-   
 }
-h1{
-    line-height: 3rem;
+
+#desktop {
+    display: block;
+}
+
+#mobile {
+    display: none;
+}
+
+.text-wrapper h1 {
     color: hsl(0, 0%, 100%);
 }
-p {
-    overflow-wrap: word-wrap;
+
+.text-wrapper span {
+    color: hsl(277, 64%, 61%);
+}
+
+.text-wrapper>p {
+    line-height: 1.8;
+    width: 89%;
     color: hsla(0, 0%, 100%, 0.75);
     margin-top: 15px;
 }
-span {
-    color: hsl(277, 64%, 61%);
-}
+
 .text-bottom {
     color: #fff;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    gap: 80px;
     margin-top: 50px;
+}
 
+.text-bottom h2 {
+    font-weight: 700;
 }
-.p {
+
+.text-bottom p {
     text-transform: uppercase;
-    font-weight: lighter;
-}
-.paragraph {
-    word-wrap: break-word;
 }
 
 @media (max-width:768px) {
     .container {
-        display: block;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
         border-radius: 0;
+        text-align: center;
+    }
+    .image {
         width: 100%;
     }
     img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+    .text-wrapper {
         width: 100%;
-        border-radius: 0;
+        padding: 2rem;
+    }
+    .text-wrapper p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .text-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 }
